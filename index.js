@@ -207,6 +207,12 @@ function getAssignmentMark(student, course, num) {
   }
 
   for (const entry of student.transcript) {
+    
+    for (const grade of entry.grades) 
+      {
+        console.log(`    Grade: ${grade}`);
+      }
+    
     if (entry.course === course) {
       if (!entry.grades || entry.grades.length === 0) 
         {
@@ -239,7 +245,8 @@ function averageAssessment(students, courseName, assignment) {
   let sum = 0;
   let count = 0;
 
-  for (const student of students) {
+  for (const student of students) 
+  {
     const mark = getAssignmentMark(student, courseName, assignment); 
 
     if (mark !== -1) 
