@@ -227,7 +227,7 @@ function getAssignmentMark(student, course, num) {
   return -1;
 }
 
-console.log(getAssignmentMark(paul, 'INFO 1600', 2));
+console.log(getAssignmentMark(paul, 'INFO 1600', 3));
 
 
 function averageAssessment(students, courseName, assignment) {
@@ -256,6 +256,3 @@ function averageAssessment(students, courseName, assignment) {
 
   return sum / count;
 }
-
-
-console.log(averageAssessment(students, 'INFO1601', 1));
